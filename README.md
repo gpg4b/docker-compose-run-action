@@ -42,7 +42,7 @@ compose-file: |
 steps:
   # need checkout before using compose-action
   - uses: actions/checkout@v3
-  - uses: adrielcodeco/docker-compose-run-action@v1
+  - uses: gpg4b/docker-compose-run-action@v1
     with:
       compose-file: './docker-compose.yml'
       service: my-service
@@ -53,7 +53,7 @@ steps:
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: adrielcodeco/docker-compose-run-action@v1
+  - uses: gpg4b/docker-compose-run-action@v1
     with:
       compose-file: './docker-compose.yml'
     env:
