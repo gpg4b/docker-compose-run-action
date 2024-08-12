@@ -11,10 +11,11 @@ try {
   const service = core.getInput('service', { required: true })
 
   const options = {
-    executablePath: 'docker',
+    // executablePath: 'docker',
     config: composeFiles,
     log: true,
-    composeOptions: ['compose', ...utils.parseFlags(core.getInput('compose-flags'))],
+    // composeOptions: ['compose', ...utils.parseFlags(core.getInput('compose-flags'))],
+    composeOptions: utils.parseFlags(core.getInput('compose-flags')),
     commandOptions: utils.parseFlags(core.getInput('run-flags')),
   }
 
